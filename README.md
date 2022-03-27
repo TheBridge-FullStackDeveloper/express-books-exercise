@@ -38,8 +38,8 @@ You'll need to import `/data/books.json` to send the books needed
 
 7. Create a route `/year&pages/cervantes` to fetch **PAGES AND YEAR** of `Miguel de Cervantes` book, Response example: `{ pages: ..., year: ... }`
 
-8. Create a route `/country/count/spain` to fetch **THE NUMBER OF BOOK** from `Spain``
+8. Create a route `/country/count/spain` to fetch **THE NUMBER OF BOOK** from `Spain`
 
-9. Create a route `/country/at-least/germany` to fetch **TRUE OR FALSE** depending on if there is or not a book from Germany
+9. Create a route `/country/at-least/germany` to fetch **TRUE OR FALSE** depending on if there is or not a book from `Germany`
 
-10. Create a route `/pages/all-greater/200` to fetch **TRUE OR FALSE** depending on if every books contain more then 200 pages
+10. Create a route `/pages/all-greater/200` to fetch **TRUE OR FALSE** depending on if every books contain more then `200` pages
