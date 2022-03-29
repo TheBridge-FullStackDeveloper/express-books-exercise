@@ -2,7 +2,7 @@
 
 ## Install
 
-Inside the report execute:
+Inside the repo execute:
 
 ```sh
 npm i
