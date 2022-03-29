@@ -71,6 +71,6 @@ app.get('/country/at-least/germany', (req, res) => {
 
 //10
 app.get('/pages/all-greater/200', (req, res) => {
-    const germanBooks = bookData.map(book => book.pages > 200)
-    res.json(germanBooks === bookData)
+    const bigBooks = bookData.map(book => book.pages > 200)
+    res.json(bigBooks === bookData)
 })
