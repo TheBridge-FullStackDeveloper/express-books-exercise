@@ -32,7 +32,7 @@ You'll need to import `/data/books.json` to send the books needed
 
 4. Crate a route `/middle` to fetch the book in the middle (number 50 in the array)
 
-5. Create a route `/book/dante-alighieri` to fetch **ONLY THE TITLE** of `Dante Alighieri`'s book
+5. Create a route `/author/dante-alighieri` to fetch **ONLY THE TITLE** of `Dante Alighieri`'s book
 
 6. Create a route `/country/charles-dickens` to fetch **ONLY THE COUNTRY** of `Charles Dickens` book
 
