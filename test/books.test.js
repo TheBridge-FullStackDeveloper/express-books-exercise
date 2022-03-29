@@ -42,7 +42,7 @@ describe("get all books: ", () => {
       .request(url)
       .get("/middle")
       .end(function (err, res) {
-        expect(res.body.title).to.equal("The recognition of Shakuntala");
+        expect(res.body.title).to.equal("The Castle");
         done();
       });
   });

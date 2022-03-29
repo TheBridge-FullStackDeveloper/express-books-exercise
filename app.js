@@ -20,7 +20,7 @@ app.get("/last", (req, res) => {
 });
 
 app.get("/middle", (req, res) => {
-  const middleBook = books[parseFloat(books.length / 2)];
+  const middleBook = books[(books.length / 2) - 1];
 
   res.json(middleBook);
 });
