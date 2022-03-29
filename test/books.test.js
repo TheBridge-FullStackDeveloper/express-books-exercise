@@ -52,6 +52,7 @@ describe("get all books: ", () => {
       .request(url)
       .get("/author/dante-alighieri")
       .end(function (err, res) {
+        console.log(res.body)
         expect(res.body).to.equal("The Divine Comedy");
         done();
       });
