@@ -14,6 +14,12 @@ Inside `app.js` you'll need to create an express server and create the routes ne
 
 ## Run tests
 
+Make sure you've the server running, if not run:
+
+```sh
+npm run start
+```
+
 To execute tests run
 
 ```sh
