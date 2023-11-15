@@ -63,8 +63,8 @@ app.get("/country/at-least/germany", (req, res) => {
 });
 
 //Create a route /pages/all-greater/200 to fetch TRUE OR FALSE depending on if every books contain more then 200 pages
-app.get("/country/at-least/germany", (req, res) => {
-  let secondResult = books.every((book) => book["pages"] > 100);
+app.get("/pages/all-greater/200", (req, res) => {
+  let secondResult = books.every((book) => book["pages"] > 200);
   res.json(secondResult);
 });
 
