@@ -57,8 +57,16 @@ app.get("/country/count/spain", (req, res) => {
 });
 
 //Create a route /country/at-least/germany to fetch TRUE OR FALSE depending on if there is or not a book from Germany
+app.get("/country/at-least/germany", (req, res) => {
+  let result = books.some((book) => book["country"] === "Germany");
+  res.json(result);
+});
 
 //Create a route /pages/all-greater/200 to fetch TRUE OR FALSE depending on if every books contain more then 200 pages
+app.get("/country/at-least/germany", (req, res) => {
+  let secondResult = books.every((book) => book["pages"] > 100);
+  res.json(secondResult);
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
