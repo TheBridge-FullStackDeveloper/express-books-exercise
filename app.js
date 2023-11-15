@@ -27,25 +27,34 @@ app.get("/middle", (req, res) => {
 app.get("/author/dante-alighieri", (req, res) => {
   books.forEach((book) => {
     if (book["author"] === "Dante Alighieri") {
-      res.send(book["title"]);
-      return;
+      res.json(book["title"]);
     }
   });
 });
 
 //Create a route /country/charles-dickens to fetch ONLY THE COUNTRY of Charles Dickens book
 app.get("/country/charles-dickens", (req, res) => {
-    books.forEach((book) => {
-      if (book["author"] === "Charles Dickens") {
-        res.send(book["country"]);
-        return;
-      }
-    });
+  books.forEach((book) => {
+    if (book["author"] === "Charles Dickens") {
+      res.json(book["country"]);
+    }
   });
+});
 
 //Create a route /year&pages/cervantes to fetch PAGES AND YEAR of Miguel de Cervantes book, Response example: { pages: ..., year: ... }
+app.get("/year&pages/cervantes", (req, res) => {
+  books.forEach((book) => {
+    if (book["author"] === "Miguel de Cervantes") {
+      res.json({ pages: book["pages"], year: book["year"] });
+    }
+  });
+});
 
 //Create a route /country/count/spain to fetch THE NUMBER OF BOOK from Spain
+app.get("/country/count/spain", (req, res) => {
+  let spanishBooks = books.filter((book) => book["country"] === "Spain");
+  res.json(spanishBooks.length);
+});
 
 //Create a route /country/at-least/germany to fetch TRUE OR FALSE depending on if there is or not a book from Germany
 
