@@ -45,7 +45,7 @@ app.get("/country/charles-dickens", (req, res) => {
 //Fetch the PAGES AND YEAR of "Miguel de Cervantes"
 app.get("/year&pages/cervantes", (req, res) => {
   let pageAndYear = books.filter((e) => e.author === "Miguel de Cervantes");
-  res.json(`${pageAndYear[0].pages + pageAndYear[0].year}`);
+  res.json({ pages: pageAndYear[0].pages, year: pageAndYear[0].year });
 });
 
 //Fetch only spanish books
@@ -56,6 +56,12 @@ app.get("/country/count/spain", (req, res) => {
 
 //Fetch only if there are german books
 app.get("/country/at-least/germany", (req, res) => {
-    let germanBooks = books.filter((e) => e.country === "Germany");
-    res.json(germanBooks? true:false);
-  });
+  let germanBooks = books.some((e) => e.country === "Germany");
+  res.json(germanBooks);
+});
+
+//Fetch only if books have more than 200 pages
+app.get("/pages/all-greater/200", (req, res) => {
+  let biggerBooks = books.every((e) => e.pages > 200);
+  res.json(biggerBooks);
+});
