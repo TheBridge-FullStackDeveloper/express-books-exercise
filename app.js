@@ -38,8 +38,8 @@ app.get("/author/dante-alighieri", (req, res) => {
 
 //Fetch only the country of "Charles Dickens"
 app.get("/country/charles-dickens", (req, res) => {
-  let DickensCountry = books.filter((e) => e.author === "Charles Dickens");
-  res.json(DickensCountry[0].country);
+  let dickensCountry = books.filter((e) => e.author === "Charles Dickens");
+  res.json(dickensCountry[0].country);
 });
 
 //Fetch the PAGES AND YEAR of "Miguel de Cervantes"
