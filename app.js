@@ -30,12 +30,39 @@ app.get("/first", (req, res) => {
   });
   //5
   app.get("/author/dante-alighieri", (req, res) => {
-    const elementFounded = books.find(elemento => elemento.author === 'Dante Alighieri')
-    if (elementFounded === 'Dante Alighieri'){
-        res.send(elementFounded.books.title)}
+    const book = books.find((book) => book.author === "Dante Alighieri");
+    res.json(book.title);
   });
   //6
   app.get("/country/charles-dickens", (req, res) => {
-    const middle = books [books.length / 2];
-    res.send(middle);
+    const book = books.find((book) => book.author === "Charles Dickens");
+  
+    res.json(book.country);
+  });
+  //7
+  app.get("/year&pages/cervantes", (req, res) => {
+    const book = books.find((book) => book.author === "Miguel de Cervantes");
+  
+    res.json({
+      pages: book.pages,
+      year: book.year,
+    });
+  });
+  //8
+  app.get("/country/count/spain", (req, res) => {
+    const booksFromSpain = books.filter((book) => book.country === "Spain");
+  
+    res.json(booksFromSpain.length);
+  });
+  //9
+  app.get("/country/at-least/germany", (req, res) => {
+    const isBookFromGermanyExist = books.some((book) => book.country === "Germany");
+  
+    res.json(isBookFromGermanyExist);
+  });
+  //10
+  app.get("/pages/all-greater/200", (req, res) => {
+    const isPagesGreaterThen200 = books.every((book) => book.pages > 200);
+  
+    res.json(isPagesGreaterThen200);
   });
