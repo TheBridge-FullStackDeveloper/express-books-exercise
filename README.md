@@ -1,51 +1,53 @@
-# Books API
+![logotipo de The Bridge](https://user-images.githubusercontent.com/27650532/77754601-e8365180-702b-11ea-8bed-5bc14a43f869.png "logotipo de The Bridge")
 
-## Install
+# 🚀 The bridge - 📚 Books API
 
-Inside the repo execute:
+## Instalación
+
+Dentro del repositorio ejecuta:
 
 ```sh
 npm i
 ```
 
-## Target
+## Objetivo
 
-Inside `app.js` you'll need to create an express server and create the routes needed to pass all the 10 tests.
+Dentro de `app.js` necesitarás crear un servidor express y crear las rutas necesarias para pasar los 10 tests.
 
-## Run tests
+## Ejecutar tests
 
-Make sure you've the server running, if not run:
+Asegúrate de que el servidor esté corriendo, si no, ejecuta:
 
 ```sh
 npm run start
 ```
 
-To execute tests run
+Para ejecutar los tests corre
 
 ```sh
 npm run test
 ```
 
-## To Do
+## Por Hacer
 
-You'll need to import `/data/books.json` to send the books needed
+Necesitarás importar `/data/books.json` para enviar los libros necesarios
 
-1. Create a route `/all` to fetch all books
+1. Crea una ruta `/all` para obtener todos los libros
 
-2. Create a route `/first` to fetch the first book
+2. Crea una ruta `/first` para obtener el primer libro
 
-3. Create a route `/last` to fetch the last book
+3. Crea una ruta `/last` para obtener el último libro
 
-4. Crate a route `/middle` to fetch the book in the middle (number 50 in the array)
+4. Crea una ruta `/middle` para obtener el libro en la mitad (número 50 en el array)
 
-5. Create a route `/author/dante-alighieri` to fetch **ONLY THE TITLE** of `Dante Alighieri`'s book
+5. Crea una ruta `/author/dante-alighieri` para obtener **SÓLO EL TÍTULO** del libro de `Dante Alighieri`
 
-6. Create a route `/country/charles-dickens` to fetch **ONLY THE COUNTRY** of `Charles Dickens` book
+6. Crea una ruta `/country/charles-dickens` para obtener **SÓLO EL PAÍS** del libro de `Charles Dickens`
 
-7. Create a route `/year&pages/cervantes` to fetch **PAGES AND YEAR** of `Miguel de Cervantes` book, Response example: `{ pages: ..., year: ... }`
+7. Crea una ruta `/year&pages/cervantes` para obtener **LAS PÁGINAS Y EL AÑO** del libro de `Miguel de Cervantes`, Ejemplo de respuesta: `{ pages: ..., year: ... }`
 
-8. Create a route `/country/count/spain` to fetch **THE NUMBER OF BOOK** from `Spain`
+8. Crea una ruta `/country/count/spain` para obtener **EL NÚMERO DE LIBROS** de `España`
 
-9. Create a route `/country/at-least/germany` to fetch **TRUE OR FALSE** depending on if there is or not a book from `Germany`
+9. Crea una ruta `/country/at-least/germany` para obtener **VERDADERO O FALSO** dependiendo de si hay o no un libro de `Alemania`
 
-10. Create a route `/pages/all-greater/200` to fetch **TRUE OR FALSE** depending on if every books contain more then `200` pages
+10. Crea una ruta `/pages/all-greater/200` para obtener **VERDADERO O FALSO** dependiendo de si todos los libros tienen más de `200` páginas
