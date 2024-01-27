@@ -87,6 +87,17 @@ describe("get all books: ", () => {
       });
   });
 
+
+  // it("should return the number of books with the country Spain", (done) => {
+  //   chai
+  //     .request(url)
+  //     .get("/country/count/spain")
+  //     .end(function (err, res) {
+  //       expect(res.body.count).to.eql(2);  // Comparar la propiedad "count" del cuerpo
+  //       done();
+  //     });
+  // });
+
   it("should return true/false if there is at least on book from Germany", (done) => {
     chai
       .request(url)
@@ -97,13 +108,52 @@ describe("get all books: ", () => {
       });
   });
 
+
+
+
+
+
+
+
+
+
   it("should return true/false if all books have more than 100 pages", (done) => {
     chai
       .request(url)
-      .get("/pages/all-greater/200")
+      .get("/pages/all-greater/100")
       .end(function (err, res) {
         expect(res.body).to.eql(false);
         done();
       });
   });
+
+  // it("should return true/false if all books have more than 100 pages", (done) => {
+  //   chai
+  //     .request(url)
+  //     .get("/pages/all-greater/100")
+  //     .end(function (err, res) {
+  //       // Verifica la propiedad que indica si todos los libros tienen más de 100 páginas
+  //       expect(res.body.allBooksHaveMoreThan100Pages).to.be.false; // Ajusta la propiedad según tu respuesta
+  //       done();
+  //     });
+  // });
+
+
+  // it("should return true/false if all books have more than 100 pages", (done) => {
+  //   chai
+  //     .request(url)
+  //     .get("/pages/all-greater/100")
+  //     .end(function (err, res) {
+  //       // Verifica que la respuesta sea un valor booleano
+  //       expect(res.body).to.be.a('boolean');
+  
+  //       // Asegúrate de que el valor sea falso (no todos los libros tienen más de 100 páginas)
+  //       expect(res.body).to.be.false;
+        
+  //       done();
+  //     });
+  // });
+
+
+
 });
