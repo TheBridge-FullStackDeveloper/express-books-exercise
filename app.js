@@ -38,11 +38,19 @@ app.get("/year&pages/cervantes", (req, res) => {
   res.json({ pages, year });
 });
 
-
 app.get("/country/count/spain", (req, res) => {
   res.json(books.filter((book) => book.country === "Spain").length);
 });
 
+app.get("/country/at-least/germany", (req, res) => {
+  const hasBookFromGermany = books.some((book) => book.country === "Germany");
+  res.json(hasBookFromGermany);
+});
+
+
+app.get("/pages/all-greater/200", (req, res) => {
+  res.json(books.every((book) => book.pages > 200));
+});
 
 
 app.listen(port, () => {
