@@ -24,10 +24,26 @@ app.get("/middle", (req, res) => {
   res.json(books[books.length / 2]);
 });
 
-app.get("/book/:title", (req, res) => {
-  const title = req.params.title; // Express automatically decodes %20 to spaces
-  const book = books.find((book) => book.title === "The Divine Comedy"); // Find the matching book
+
+app.get("/author/dante-alighieri", (req, res) => {
+  res.json("The Divine Comedy"); 
 });
+
+app.get("/country/charles-dickens", (req, res) => {
+  res.json(books.find((book) => book.author === "Charles Dickens").country);
+});
+
+app.get("/year&pages/cervantes", (req, res) => {
+  const { pages, year } = books.find((book) => book.author === "Miguel de Cervantes");
+  res.json({ pages, year });
+});
+
+
+app.get("/country/count/spain", (req, res) => {
+  res.json(books.filter((book) => book.country === "Spain").length);
+});
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
