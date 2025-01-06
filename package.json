@@ -1,7 +1,7 @@
 {
   "name": "books-express-exercise",
   "version": "1.0.0",
-  "description": "",
+  "description": "![logotipo de The Bridge](https://user-images.githubusercontent.com/27650532/77754601-e8365180-702b-11ea-8bed-5bc14a43f869.png \"logotipo de The Bridge\")",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.js",
@@ -13,8 +13,11 @@
   "dependencies": {
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
-    "express": "^4.17.3",
+    "express": "^4.21.2",
     "mocha": "^9.2.2",
     "nodemon": "^2.0.15"
+  },
+  "directories": {
+    "test": "test"
   }
 }
