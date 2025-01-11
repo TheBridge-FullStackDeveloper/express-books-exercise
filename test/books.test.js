@@ -87,7 +87,7 @@ describe("get all books: ", () => {
       });
   });
 
-  it("should return true/false if there is at least on book from Germany", (done) => {
+  it("should return true/false if there is at least one book from Germany", (done) => {
     chai
       .request(url)
       .get("/country/at-least/germany")
@@ -97,7 +97,7 @@ describe("get all books: ", () => {
       });
   });
 
-  it("should return true/false if all books have more than 100 pages", (done) => {
+  it("should return true/false if all books have more than 200 pages", (done) => {
     chai
       .request(url)
       .get("/pages/all-greater/200")
